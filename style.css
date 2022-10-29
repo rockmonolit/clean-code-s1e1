@@ -98,7 +98,7 @@ button{
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -109,9 +109,10 @@ input[type="text"] {
   border-radius: 6px;
   font-family: lato, sans-serif;
   color: #888;
+  flex-grow: 1;
 }
 
-input[type="text"]:focus {
+.input:focus {
   color: #333;
 }
 
@@ -143,14 +144,15 @@ li > * {
   margin: 0 10px;
 }
 
-li > label {
+.label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+  flex-grow: 1;
 }
 
-li >  input[type="text"] {
+li >  .input {
   width: 226px;
 }
 
@@ -171,11 +173,11 @@ li >  input[type="text"] {
 }
 
 /* Edit Task */
-ul li input[type=text] {
+ul li .input {
   display: none;
 }
 
-ul li.edit-mode input[type=text] {
+ul li.edit-mode .input {
   display: inline-block;
   width: 224px;
 }
