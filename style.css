@@ -60,7 +60,7 @@ button{
   outline: none;
 }
 
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -70,8 +70,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
+}
+
+.button_add {
+  margin-right: 60px;
 }
 
 /* Heading */
@@ -150,13 +154,13 @@ li >  input[type="text"] {
   width: 226px;
 }
 
-.button-delete__icon {
+.button__delete-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.button-delete__icon:hover {
+.button__delete-icon:hover {
   transform: rotateZ(0);
 }
 
