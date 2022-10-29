@@ -39,7 +39,7 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='label incomplete-tasks__label';
+    label.className='label';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -130,11 +130,9 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
-    completedTasksHolder.appendChild(listItem);
-    // label.removeAttribute("class");
-    // label.setAttribute("class", "label completed-tasks__label");
-    let label = listItem.childNodes[3];
-    // label.classList.toggle("completed-tasks__label");
+    completedTasksHolder.appendChild(listItem);    
+    let label = listItem.querySelector(".label");
+    label.classList.toggle("completed-tasks__label");
     console.log(label);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -148,10 +146,8 @@ var taskIncomplete=function(){
     //Append the task list item to the #incomplete-tasks.
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
-    // label.className="aaaaa";
-    // label.setAttribute("class", "label incomplete-tasks__label");
-    let label = listItem.childNodes[3];
-    // label.classList.toggle("label");
+    let label = listItem.querySelector(".label");
+    label.classList.toggle("completed-tasks__label");
     console.log(label);
     bindTaskEvents(listItem,taskCompleted);
 }
