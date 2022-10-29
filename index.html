@@ -20,10 +20,11 @@
     <section class="add-item">
       <h3 class="title">Add Item</h3>
       <div class="add-item__input-wrapper">
-        <input class="input new-task task" type="text">
+        <input class="input new-task" type="text">
         <button class="button button_add">Add</button>
       </div>
     </section>
+    <section class="incomplete-tasks1">
     <h3 class="title">Todo</h3>
     <ul class="incomplete-tasks">
       <li>
@@ -38,25 +39,28 @@
       <li class="edit-mode">
         <input type="checkbox" class="checkbox">
         <label class="label">Go Shopping</label>
-        <input type="text" value="Go Shopping" class="input task">
+        <input type="text" value="Go Shopping" class="input">
         <button class="button button_edit">Save</button>
         <button class="button button_delete">
           <img class="button__delete-icon" src="./remove.svg" alt="Remove icon">
         </button>
       </li>
     </ul>
+    </section>
+    <section class="completed-tasks1">
     <h3 class="title">Completed</h3>
     <ul class="completed-tasks">
       <li>
         <input type="checkbox" class="checkbox" checked>
         <label class="label">See the Doctor</label>
-        <input type="text" class="input task">
+        <input type="text" class="input">
         <button class="button button_edit">Edit</button>
         <button class="button button_delete">
           <img class="button__delete-icon" src="./remove.svg" alt="Remove icon">
         </button>
       </li>
     </ul>
+    </section>
   </main>
   <script src="app.js"></script>
 </body>
