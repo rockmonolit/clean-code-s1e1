@@ -45,7 +45,8 @@ body {
   margin-top: 20px;
 }
 
-.incomplete-tasks__list, .completed-tasks__list {
+.incomplete-tasks__list, 
+.completed-tasks__list {
   margin: 0;
   padding: 0px;
 }
