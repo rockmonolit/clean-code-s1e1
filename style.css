@@ -40,8 +40,9 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.add-item__input-wrapper {
   display: flex;
+  margin-top: 20px;
 }
 
 ul {
@@ -83,8 +84,7 @@ button:hover {
   margin-inline-end: 0px;
 }
 
-h3,
-label[for="new-task"] {
+.title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
