@@ -45,19 +45,9 @@ body {
   margin-top: 20px;
 }
 
-ul {
+.incomplete-tasks__list, .completed-tasks__list {
   margin: 0;
   padding: 0px;
-}
-
-li, 
-h3 {
-  list-style: none;
-}
-
-input,
-button{
-  outline: none;
 }
 
 .button {
@@ -68,6 +58,7 @@ button{
   width: 60px;
   font-family: lato, sans-serif;
   cursor: pointer;
+  outline: none;
 }
 
 .button:hover {
@@ -110,6 +101,7 @@ button{
   font-family: lato, sans-serif;
   color: #888;
   flex-grow: 1;
+  outline: none;
 }
 
 .input:focus {
@@ -123,16 +115,14 @@ button{
 }
 
 /* Task list */
-li {
+
+.list {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-li > * {
   vertical-align: middle;
 }
 
@@ -147,10 +137,6 @@ li > * {
   width: 226px;
   flex-grow: 1;
 }
-
-/* li >  .input {
-  width: 226px;
-} */
 
 .button__delete-icon {
   height: 2em;
