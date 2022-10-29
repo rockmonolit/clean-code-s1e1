@@ -20,6 +20,7 @@ var completedTasksHolder=document.querySelector(".completed-tasks__list");//comp
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
+    listItem.className="list";
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -43,7 +44,7 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="input task";
+    editInput.className="input list__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="button button_edit";
@@ -91,7 +92,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('.input');
     var label=listItem.querySelector(".label");
     var editBtn=listItem.querySelector(".button_edit");
-    var containsClass=listItem.classList.contains("edit-mode");
+    var containsClass=listItem.classList.contains("list_edit-mode");
     //If class of the parent is .edit-mode
     if(containsClass){
 
@@ -105,7 +106,9 @@ var editTask=function(){
     }
 
     //toggle .edit-mode on the parent.
-    listItem.classList.toggle("edit-mode");
+    listItem.classList.toggle("list_edit-mode");
+    label.classList.toggle("label_edit-mode");
+    editInput.classList.toggle("input_edit-mode");
 };
 
 
@@ -130,6 +133,9 @@ var taskCompleted=function(){
     completedTasksHolder.appendChild(listItem);
     // label.removeAttribute("class");
     // label.setAttribute("class", "label completed-tasks__label");
+    let label = listItem.childNodes[3];
+    // label.classList.toggle("completed-tasks__label");
+    console.log(label);
     bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -144,6 +150,9 @@ var taskIncomplete=function(){
     incompleteTaskHolder.appendChild(listItem);
     // label.className="aaaaa";
     // label.setAttribute("class", "label incomplete-tasks__label");
+    let label = listItem.childNodes[3];
+    // label.classList.toggle("label");
+    console.log(label);
     bindTaskEvents(listItem,taskCompleted);
 }
 

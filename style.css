@@ -148,9 +148,9 @@ li > * {
   flex-grow: 1;
 }
 
-li >  .input {
+/* li >  .input {
   width: 226px;
-}
+} */
 
 .button__delete-icon {
   height: 2em;
@@ -169,15 +169,15 @@ li >  .input {
 }
 
 /* Edit Task */
-ul li .input {
+.list__input {
   display: none;
 }
 
-ul li.edit-mode .input {
+.input_edit-mode {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
+.label_edit-mode {
   display: none;
 }
