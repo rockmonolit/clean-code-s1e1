@@ -8,11 +8,12 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.querySelector(".new-task");//Add a new task.
+var taskInput=document.querySelector(".add-item__input");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 addButton.className="button";
 var incompleteTaskHolder=document.querySelector(".incomplete-tasks__list");//ul of #incomplete-tasks
 var completedTasksHolder=document.querySelector(".completed-tasks__list");//completed-tasks
+
 
 
 //New task list item
@@ -37,7 +38,7 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='label';
+    label.className='label incomplete-tasks__label';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -127,6 +128,8 @@ var taskCompleted=function(){
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
     completedTasksHolder.appendChild(listItem);
+    // label.removeAttribute("class");
+    // label.setAttribute("class", "label completed-tasks__label");
     bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -139,6 +142,8 @@ var taskIncomplete=function(){
     //Append the task list item to the #incomplete-tasks.
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
+    // label.className="aaaaa";
+    // label.setAttribute("class", "label incomplete-tasks__label");
     bindTaskEvents(listItem,taskCompleted);
 }
 
