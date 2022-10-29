@@ -11,8 +11,8 @@
 var taskInput=document.querySelector(".new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 addButton.className="button";
-var incompleteTaskHolder=document.querySelector(".incomplete-tasks");//ul of #incomplete-tasks
-var completedTasksHolder=document.querySelector(".completed-tasks");//completed-tasks
+var incompleteTaskHolder=document.querySelector(".incomplete-tasks__list");//ul of #incomplete-tasks
+var completedTasksHolder=document.querySelector(".completed-tasks__list");//completed-tasks
 
 
 //New task list item
